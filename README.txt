@@ -22,3 +22,7 @@ to do stuff basically)
 4. Type "./lin8x.py"
 
 ----------------------------------------------------------------------------------------------
+
+*IF YOU NEED TO USE THIS TOOL AND BORROW ANY LARGE AMOOUNT OF SOURCE CODE, PLEASE ASK ME FIRST.
+
+----------------------------------------------------------------------------------------------
