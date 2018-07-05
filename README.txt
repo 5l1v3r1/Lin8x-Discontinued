@@ -23,6 +23,6 @@ to do stuff basically)
 
 ----------------------------------------------------------------------------------------------
 
-*IF YOU NEED TO USE THIS TOOL AND BORROW ANY LARGE AMOOUNT OF SOURCE CODE, PLEASE ASK ME FIRST.
+*IF YOU NEED TO USE THIS TOOL AND BORROW ANY LARGE AMOOUNT OF SOURCE CODE, PLEASE ASK ME FIRST.*
 
 ----------------------------------------------------------------------------------------------
