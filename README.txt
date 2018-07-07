@@ -2,11 +2,22 @@
 
 ----------------------------------------------------------------------------------------------
 
-A nice simple python tool I made for Kali.
-This is actually my first Python tool I made, so I really hope you enjoy it.
-I will keep updating this tool as time goes on, but till then, enjoy the most recent version!
+This tool was designed with the intent of making a simple and easy tool, that would be perfect for if you wanted to target
+a specific person. Whether this be by doing a full search on the internet, a nmap scan, or even through shodan, Lin8x has all you need!
+
+"Me and the team will keep updating this tool as time goes on, but till then, enjoy the most recent version!" - AnonymousContent
+
+Feel free to join our discord at:
+https://discord.gg/H3jUDUK
+
+----------------------------------------------------------------------------------------------
 
 V.1.0 - Lin8x made
+- Full Setup complete
+
+V.2 - Lin8x made
+- Added RootD0S
+- Fixed small bugs
 
 ----------------------------------------------------------------------------------------------
 
@@ -23,6 +34,6 @@ to do stuff basically)
 
 ----------------------------------------------------------------------------------------------
 
-*IF YOU NEED TO USE THIS TOOL AND BORROW ANY LARGE AMOOUNT OF SOURCE CODE, PLEASE ASK ME FIRST.*
+*IF YOU NEED TO USE THIS TOOL AND BORROW ANY LARGE AMOUNT OF SOURCE CODE, PLEASE ASK FIRST.*
 
 ----------------------------------------------------------------------------------------------
