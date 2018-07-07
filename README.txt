@@ -7,6 +7,8 @@ a specific person. Whether this be by doing a full search on the internet, a nma
 
 "Me and the team will keep updating this tool as time goes on, but till then, enjoy the most recent version!" - AnonymousContent
 
+"One of the most best tools to simplify hacking and learn some new things. I think we caan make this grow and if we work hard we can do it. If you have any suggestion just tell us! " - iByNiki_
+
 Feel free to join our discord at:
 https://discord.gg/H3jUDUK
 
