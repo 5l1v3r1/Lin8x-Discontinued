@@ -21,7 +21,7 @@ V.2 - Lin8x made
 - Added RootD0S
 - Fixed small bugs
 
-V.3 - Linx made
+V.3 - Lin8x made
 - Added "Learn to hack" section
 - Added auto-update section
 
