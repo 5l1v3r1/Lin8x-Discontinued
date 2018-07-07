@@ -12,6 +12,8 @@ https://discord.gg/H3jUDUK
 
 ----------------------------------------------------------------------------------------------
 
+--- The Newest Version will always be called "Lin8x" in the files! ---
+
 V.1.0 - Lin8x made
 - Full Setup complete
 
