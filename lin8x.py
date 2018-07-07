@@ -1327,7 +1327,7 @@ elif answer == "98":
     clearScr()
     os.system('sudo apt install git')
     os.system('sudo apt-get install git')
-    os.system('git clone https://githubcom/Lin8x/Lin8x')
+    os.system('git clone https://github.com/Lin8x/Lin8x')
 
 ############################################################
 
