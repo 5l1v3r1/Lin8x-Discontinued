@@ -17,18 +17,18 @@ https://discord.gg/H3jUDUK
 
 --- The Newest Version will always be called "Lin8x" in the files! ---
 
-V.1.0 - Lin8x made
+V.1 - Lin8x made: First Version!
 - Full Setup complete
 
-V.2 - Lin8x made
+V.2 - Lin8x made: Niki Update
 - Added RootD0S
 - Fixed small bugs
 
-V.3 - Lin8x made
+V.3 - Lin8x made: The Better Menu Update
 - Added "Learn to hack" section
 - Added auto-update section
 
-V.4 - Lin8x made
+V.4 - Lin8x made: The More Secretive Update
 - Added "Fake Credit Cards" to Ghost Mode
 - Added "Fake Identity" to Ghost Mode
 - Added more sites to the "Emails" in Ghost Mode
