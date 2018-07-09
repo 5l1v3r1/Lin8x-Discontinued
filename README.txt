@@ -7,7 +7,7 @@ a specific person. Whether this be by doing a full search on the internet, a nma
 
 "Me and the team will keep updating this tool as time goes on, but till then, enjoy the most recent version!" - AnonymousContent
 
-" One of the best tools to simplify hacking and learn some new things. I think we can make this grow and if we work hard we can do it. 
+"One of the best tools to simplify hacking and learn some new things. I think we can make this grow and if we work hard we can do it. 
 If you have any suggestion just tell us! " - iByNiki_
 
 Feel free to join our discord at:
@@ -27,6 +27,12 @@ V.2 - Lin8x made
 V.3 - Lin8x made
 - Added "Learn to hack" section
 - Added auto-update section
+
+V.4 - Lin8x made
+- Added "Fake Credit Cards" to Ghost Mode
+- Added "Fake Identity" to Ghost Mode
+- Added more sites to the "Emails" in Ghost Mode
+- Added an Ettercap DNS Section in the Sniffing/Spoofing Section
 
 ----------------------------------------------------------------------------------------------
 
