@@ -1,5 +1,3 @@
-# Lin8x
-
 ----------------------------------------------------------------------------------------------
 
 This tool was designed with the intent of making a simple and easy tool, that would be perfect for if you wanted to target
@@ -33,6 +31,16 @@ V.4 - Lin8x made: The More Secretive Update
 - Added "Fake Identity" to Ghost Mode
 - Added more sites to the "Emails" in Ghost Mode
 - Added an Ettercap DNS Section in the Sniffing/Spoofing Section
+
+V.5 - Lin8x made: The Exploit Update
+- Added A Payload Maker for Android
+- Added A Payload Maker for iOS
+- Added A Payload Maker for Windows
+- Added A Payload Maker for Mac OS
+- Added A Payload Maker for Linux
+- Added Lin8x Logo to Main Menu
+- Added the Rat/Payload Maker Section to Main Menu
+- Changed "Learn to Hack Section" to [97]
 
 ----------------------------------------------------------------------------------------------
 
