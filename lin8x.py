@@ -1626,8 +1626,8 @@ Ill do it later.
 ..................DDDDDDN..........,NDDDDDN ......  ....... 
 """
      
-        print bcolors.red + """[1]""" + bcolors.blue + """  Create a Basic Trojan (WAN, .macho)"""
-        print bcolors.red + """[2]""" + bcolors.blue + """  Create a Basic Trojan (WAN, .macho)"""
+        print bcolors.red + """[1]""" + bcolors.blue + """  Create a Basic Trojan (WAN, .macho) (Mac OS)"""
+        print bcolors.red + """[2]""" + bcolors.blue + """  Create a Basic Trojan (WAN, .macho) (iOS)"""
         print bcolors.red + """[3]""" + bcolors.blue + """  Create a Basic Trojan (WAN, .py)"""
         print bcolors.red + """[99]""" + bcolors.blue + """ Back to Menu"""
 
