@@ -33,14 +33,26 @@ V.4 - Lin8x made: The More Secretive Update
 - Added an Ettercap DNS Section in the Sniffing/Spoofing Section
 
 V.5 - Lin8x made: The Exploit Update
-- Added A Payload Maker for Android
-- Added A Payload Maker for iOS
-- Added A Payload Maker for Windows
-- Added A Payload Maker for Mac OS
-- Added A Payload Maker for Linux
+- Added A Payload Maker for Android (reverse_tcp)
+- Added A Payload Maker for iOS (reverse_tcp)
+- Added A Payload Maker for Windows (reverse_tcp)
+- Added A Payload Maker for Mac OS (reverse_tcp)
+- Added A Payload Maker for Linux (reverse_tcp)
 - Added Lin8x Logo to Main Menu
 - Added the Rat/Payload Maker Section to Main Menu
-- Changed "Learn to Hack Section" to [97]
+- Changed "Learn to Hack" Section to [97]
+
+V.6 - Lin8x made: The Buggy Update
+- Added reverse_https, and reverse_http to the payload maker for Android
+- Added reverse_https, and reverse_http to the payload maker for Windows
+- Added reverse_https to the payload maker for iOS
+- Added reverse_https to the payload maker for Mac OS
+- Added reverse_tcp to the payload maker for Linux
+- Added a .dmg file type maker for the Mac OS Payload Maker
+- Added a .rar file type maker for the Windows Payload Maker
+- Added a "Credits" Section to the Main Menu
+- Fixed the bugs for the Linux Payload Maker
+- Changed "Learn to Hack" Section to [96]
 
 ----------------------------------------------------------------------------------------------
 
