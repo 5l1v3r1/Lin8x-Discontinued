@@ -58,6 +58,60 @@ def clearScr():
 def yesOrNo():
     return (raw_input("Continue Y / N: ") in yes)
 
+global mac
+mac = "eth0"
+
+def mac():
+    clearScr()
+    clearScr()
+    clearScr()
+    print bcolors.red + """############################################################
+"""
+
+    print bcolors.white + "Current Mac Address (Based by " + bcolors.green + "eth0" + bcolors.white + ")"
+    print bcolors.white + ""
+    os.system('macchanger -s eth0')
+    print bcolors.red + """
+############################################################
+"""
+    print bcolors.red + """[1]""" + bcolors.blue + """  Change to Random MAC address
+"""
+    print bcolors.red + """[2]""" + bcolors.blue + """  Change to Specific MAC Address
+"""
+    print bcolors.red + """[3]""" + bcolors.blue + """  See Macchanger/Hardware Specific List
+"""
+    print bcolors.red + """[99]""" + bcolors.blue + """ Back to Menu"""
+    print bcolors.red + """
+############################################################
+"""
+    mac1 = raw_input(bcolors.green + bcolors.bold + 'lin8x@kali' + bcolors.white + ':~# ')
+    if mac1 == '1':
+        os.system('macchanger -r eth0')
+    if mac1 == '2':
+        ap = raw_input(bcolors.white + """Type what type of MAC Address you want to change to (E.g 00:d0:70:20:69:14): 
+""")
+        if ap == '99':
+            subprocess.call(["python", "lin8x.py"])
+        else:
+            print "Ok, changing MAC Address to: " + ap    
+
+        os.system('macchanger -m ' + ap + " eth0")
+
+        finish = raw_input("Press Enter To Continue")
+        subprocess.call(["python", "lin8x.py"])
+
+    if mac1 == '3':
+        os.system('macchanger -l')
+        print bcolors.white + ""
+        leave = raw_input(bcolors.white + """Press Enter to Go Back to Menu...""")
+        if leave == '':
+            subprocess.call(["python", "lin8x.py"])
+        else:
+            subprocess.call(["python", "lin8x.py"])
+
+    if mac1 == '99':
+        subprocess.call(["python", "lin8x.py"])
+
 ############################################################
 
 clearScr()
@@ -113,6 +167,8 @@ print bcolors.red + """ [3] """ + bcolors.blue + """ Device Scanning + Exploitat
 print bcolors.red + """ [4] """ + bcolors.blue + """ Car Scanning """ 
 print bcolors.red + """ [5] """ + bcolors.blue + """ Ghost Mode """
 print bcolors.red + """ [6] """ + bcolors.blue + """ Trojan/Rat Malware Creater """
+print bcolors.red + """ [7] """ + bcolors.blue + """ Change MAC Address """
+print bcolors.red + """ [95] """ + bcolors.blue + """Download Requirements """
 print bcolors.red + """ [96] """ + bcolors.blue + """Learn Hacking """ 
 print bcolors.red + """ [97] """ + bcolors.blue + """Credits """
 print bcolors.red + """ [98] """ + bcolors.blue + """Update Tool """
@@ -290,6 +346,8 @@ if answer == "1":
         os.system('maltego')
     if answerr == '99':
         subprocess.call(["python", "lin8x.py"])
+    else:
+        subprocess.call(["python", "lin8x.py"])
 ############################################################
 
 ############################################################
@@ -383,6 +441,8 @@ elif answer == "2":
         answer21 = raw_input(bcolors.bold + bcolors.green + 'lin8x@kali' + bcolors.white + ':~# ')
         if answer21 == '99':
             subprocess.call(["python", "lin8x.py"])
+        else:
+            subprocess.call(["python", "lin8x.py"])
 ############################################################
     
     if answer2 == '2':
@@ -392,6 +452,8 @@ elif answer == "2":
 ############################################################
 
     elif answer2 == '99':
+        subprocess.call(["python", "lin8x.py"])
+    else:
         subprocess.call(["python", "lin8x.py"])
 ############################################################
 
@@ -422,7 +484,8 @@ elif answer == "3":
     print bcolors.red + """[3]""" + bcolors.blue + """   Metasploit (Different Tools/Parts)"""
     print bcolors.red + """[4]""" + bcolors.blue + """   Hacking Open Devices/Ports"""
     print bcolors.red + """[5]""" + bcolors.blue + """   Burpsuite"""
-    print bcolors.red + """[6] """ + bcolors.blue + """  RootD0S Tool (Websites/IPs) """
+    print bcolors.red + """[6] """ + bcolors.blue + """  RootD0S Tool (Websites/IPs)"""
+    print bcolors.red + """[7] """ + bcolors.blue + """  Hacking With Antenna (WEP Cracking, MITM Attacks, etc) """
     print bcolors.red + """[99]""" + bcolors.blue + """  Back to Menu"""
     print ""
     print bcolors.green + ""
@@ -435,11 +498,6 @@ elif answer == "3":
         clearScr()
         clearScr()
         clearScr()
-	print bcolors.red + """ Please wait while nmap installs """
-	from time import sleep
-	sleep(1)
-	print bcolors.white
-	os.system("sudo apt-get install nmap")
         clearScr()
         clearScr()
         clearScr()
@@ -542,6 +600,8 @@ elif answer == "3":
                os.system("nmap -vv " + domain)
             if nmap1 == '99':
                subprocess.call(["python", "lin8x.py"])
+            else:
+               subprocess.call(["python", "lin8x.py"])
         if nmap == '2':
             clearScr()
             clearScr()
@@ -605,6 +665,8 @@ elif answer == "3":
                os.system("nmap -F " + domain)
             if nmap4 == '99':
                subprocess.call(["python", "lin8x.py"])
+            else:
+               subprocess.call(["python", "lin8x.py"])
         if nmap == '5':
             clearScr()
             clearScr()
@@ -635,6 +697,8 @@ elif answer == "3":
             if nmap5 == '2':
                os.system("nmap -open " + domain)
             if nmap5 == '99':
+               subprocess.call(["python", "lin8x.py"])
+            else:
                subprocess.call(["python", "lin8x.py"])
         if nmap == '6':
             clearScr()
@@ -667,6 +731,8 @@ elif answer == "3":
                os.system("nmap -O " + domain)
             if nmap6 == '99':
                subprocess.call(["python", "lin8x.py"])
+            else:
+               subprocess.call(["python", "lin8x.py"])
         if nmap == '7':
             clearScr()
             clearScr()
@@ -697,6 +763,8 @@ elif answer == "3":
             if nmap7 == '2':
                os.system("nmap -sV " + domain)
             if nmap7 == '99':
+               subprocess.call(["python", "lin8x.py"])
+            else:
                subprocess.call(["python", "lin8x.py"])
         if nmap == '8':
             clearScr()
@@ -729,6 +797,8 @@ elif answer == "3":
                os.system("nmap -sA " + domain)
             if nmap8 == '99':
                subprocess.call(["python", "lin8x.py"])
+            else:
+               subprocess.call(["python", "lin8x.py"])
         if nmap == '9':
             clearScr()
             clearScr()
@@ -759,6 +829,8 @@ elif answer == "3":
             if nmap9 == '2':
                os.system("nmap -Pn " + domain)
             if nmap9 == '99':
+               subprocess.call(["python", "lin8x.py"])
+            else:
                subprocess.call(["python", "lin8x.py"])
         if nmap == '10':
             clearScr()
@@ -791,6 +863,8 @@ elif answer == "3":
                os.system("nmap -sS " + domain)
             if nmap10 == '99':
                subprocess.call(["python", "lin8x.py"])
+            else:
+               subprocess.call(["python", "lin8x.py"])
         if nmap == '11':
             clearScr()
             clearScr()
@@ -821,6 +895,8 @@ elif answer == "3":
             if nmap11 == '2':
                os.system("nmap -n " + domain)
             if nmap11 == '99':
+               subprocess.call(["python", "lin8x.py"])
+            else:
                subprocess.call(["python", "lin8x.py"])
         if nmap == '12':
             clearScr()
@@ -856,6 +932,8 @@ elif answer == "3":
                os.system("nmap --spof-mac 0 " + ip)
             if nmap12 == '99':
                subprocess.call(["python", "lin8x.py"])
+            else:
+               subprocess.call(["python", "lin8x.py"])
         if nmap == '13':
             clearScr()
             clearScr()
@@ -887,7 +965,11 @@ elif answer == "3":
                os.system("nmap -open " + domain)
             if nmap4 == '99':
                subprocess.call(["python", "lin8x.py"])
+            else:
+               subprocess.call(["python", "lin8x.py"])
         if nmap == '99':
+            subprocess.call(["python", "lin8x.py"])
+        else:
             subprocess.call(["python", "lin8x.py"])
     if ds == '2':
 
@@ -1062,9 +1144,15 @@ https://www.docdroid.net/QKOE7wJ/tutorial-dns-spoofing.pdf#page=2
                     os.system('route -n')
                 if d2c == '99':
                     subprocess.call(["python", "lin8x.py"])
+                else:
+                    subprocess.call(["python", "lin8x.py"])
             if d2b == '99':
                 subprocess.call(["python", "lin8x.py"])
+            else:
+                subprocess.call(["python", "lin8x.py"])
         if d2 == '99':
+            subprocess.call(["python", "lin8x.py"])
+        else:
             subprocess.call(["python", "lin8x.py"])
     if ds == '3':
 
@@ -1126,6 +1214,8 @@ https://www.docdroid.net/QKOE7wJ/tutorial-dns-spoofing.pdf#page=2
         if d3 == '4':
             os.system('armitage')
         if d3 == '99':
+            subprocess.call(["python", "lin8x.py"])
+        else:
             subprocess.call(["python", "lin8x.py"])
     if ds == '4':
         clearScr()
@@ -1211,9 +1301,13 @@ Alrighty, get to work my friend. Hope this was helpful!
             b4 = raw_input(bcolors.bold + bcolors.green + 'lin8x@kali' + bcolors.white + ':~# ')
             if b4 == '99':
                 subprocess.call(["python", "lin8x.py"])
+            else:
+                subprocess.call(["python", "lin8x.py"])
         if d4 == '2':
             os.system('zenmap')
         if d4 == '99':
+            subprocess.call(["python", "lin8x.py"])
+        else:
             subprocess.call(["python", "lin8x.py"])
     if ds == '5':
         os.system('burpsuite')
@@ -1260,6 +1354,8 @@ Alrighty, get to work my friend. Hope this was helpful!
         web = raw_input(" Website: ")
         if web == '99':
             subprocess.call(["python", "lin8x.py"])
+        else:
+            subprocess.call(["python", "lin8x.py"])
         print bcolors.red + """############################################################
 """
         print bcolors.red + """ DDOS starting in 1 second """
@@ -1272,7 +1368,142 @@ Alrighty, get to work my friend. Hope this was helpful!
         os.system("sudo hping3 -p 80 -S -i u3000 " + web)
 
 ############################################################
+
+    if ds == '7':
+        clearScr()
+        clearScr()
+        clearScr()
+        print bcolors.red + bcolors.bold + """############################################################"""
+        print bcolors.green + """
+   .~~.   .~~.
+  '. \ ' ' / .'""" + bcolors.red + """
+   .~ .~~~..~.
+  : .~.'~'.~. :
+ ~ (   ) (   ) ~ 
+( : '~'.~.'~' : )
+ ~ .~ (   ) ~. ~
+  (  : '~' :  )
+   '~ .~~~. ~'
+       '~'
+"""
+
+        print bcolors.red + """[1]""" + bcolors.blue + """ Hunt Down & Crack WEP WIFIs"""
+        print bcolors.red + """[99]""" + bcolors.blue + """ Back to menu"""
+
+        print bcolors.white + ""
+        print bcolors.red + bcolors.bold + """############################################################
+"""
+        wifi = raw_input(bcolors.bold + bcolors.green + 'lin8x@kali' + bcolors.white + ':~# ')
+        if wifi == '1':
+            clearScr()
+            clearScr()
+            clearScr()
+            print bcolors.red + bcolors.bold + """############################################################
+"""
+            print bcolors.red + """WARNING: PLEASE MAKE SURE YOU HAVE AN ADAPTER
+PLUGGED INTO YOUR COMPUTER AND IS ALREADY SETUP, AS WELL AS HAVE MONITOR MODE BEFORE CONTINUING! TO EXIT PLEASE DO "CTRL + C"!
+"""
+
+            print bcolors.green + """As Soon as you do all the steps in the tool 
+required, type:""" + bcolors.yellow + """ "besside-ng {interface name} -c 6 -b {Specific network BSSID}" """ + bcolors.green + """
+
+Specific Requirements to Run All of This:
+Aircrack-ng (The Rest Below are Part of Aircrack-ng, but whatever.)
+Airodump-ng (Listing This Just In Case)
+Besside-ng (Listing This Just In Case)
+"""
+
+            print bcolors.red + bcolors.bold + """############################################################
+"""
+            print bcolors.red + """Please Press""" + bcolors.green + """ {ENTER} """ + bcolors.red + """to continue..."""
+            wifi1 = raw_input(bcolors.white + '')
+            if wifi1 == "":
+                clearScr()
+                clearScr()
+                clearScr()
+                print bcolors.green + bcolors.bold + """############################################################
+"""             
+                os.system('ip a')
+                print bcolors.green + bcolors.bold + """
+############################################################
+"""
+                os.system('ifconfig')
+                print bcolors.green + bcolors.bold + """
+############################################################
+"""
+                print bcolors.white + "Please type the name of your network adapter:"
+                wifi2 = raw_input(bcolors.green + '')
+                os.system('airodump-ng ' + wifi2 + ' --encrypt wep')
+                print bcolors.white + bcolors.bold + """
+############################################################
+"""
+
+                print bcolors.white + "Interface Name: " + bcolors.red + wifi2 
+
+                print bcolors.white + bcolors.bold + """
+############################################################
+"""
+                wifi3= raw_input(bcolors.green + """Type the Command: "besside-ng {interface name} -c 6 -b {Specific network BSSID}"
+""")
+                os.system(wifi3)
+            else:
+                subprocess.call(["python", "lin8x.py"])               
+############################################################
+
+        if wifi == 'set as 2': # Note to self. - DONT FORGET THIS U NUMSKULL! 
+            clearScr()
+            clearScr()
+            clearScr()
+            print bcolors.red + bcolors.bold + """############################################################
+"""
+            print bcolors.red + """WARNING: PLEASE MAKE SURE YOU HAVE AN ADAPTER
+PLUGGED INTO YOUR COMPUTER AND IS ALREADY SETUP, AS WELL AS HAVE MONITOR MODE BEFORE CONTINUING! TO EXIT PLEASE DO "CTRL + C"!
+"""
+
+            print bcolors.red + bcolors.bold + """############################################################
+"""
+            print bcolors.red + """Please Press""" + bcolors.green + """ {ENTER} """ + bcolors.red + """to continue..."""
+            wifi2 = raw_input(bcolors.white + '')
+            if wifi2 == "":
+                clearScr()
+                clearScr()
+                clearScr()
+                print bcolors.green + bcolors.bold + """############################################################
+"""             
+                os.system('ip a')
+                print bcolors.green + bcolors.bold + """
+############################################################
+"""
+                os.system('ifconfig')
+                print bcolors.green + bcolors.bold + """
+############################################################
+"""
+                print bcolors.white + "Please type the name of your network adapter:"
+                wifi2 = raw_input(bcolors.green + '')
+                clearScr()
+                os.system('airmon-ng start ' + wifi2)
+                print bcolors.red + """As soon as the scan has been finished, type""" + bcolors.green + """airodump-ng -c [channel] --bssid [bssid] -w root/Desktop/ [monitor interface] (normally being mon0""" + bcolors.red + """ 
+Please Press""" + bcolors.green + """ {ENTER} """ + bcolors.red + """to continue..."""
+                wifi3 = raw_input(bcolors.white + '')
+                if wifi3 == "":
+                    os.system('airodump-ng ' + wifi2 + 'mon')
+                else:
+                    subprocess.call(["python", "lin8x.py"]) 
+            else:
+                subprocess.call(["python", "lin8x.py"])    
+
+############################################################
+
+
+        if wifi == '99':
+            subprocess.call(["python", "lin8x.py"])
+        else:
+            subprocess.call(["python", "lin8x.py"])
+############################################################
+
     if ds == '99':
+        subprocess.call(["python", "lin8x.py"])
+    else:
         subprocess.call(["python", "lin8x.py"])
 
 ############################################################
@@ -1322,6 +1553,8 @@ https://www.brickhousesecurity.com/gps-trackers/car-tracking/
 
     answer4 = raw_input(bcolors.bold + bcolors.green + 'lin8x@kali' + bcolors.white + ':~# ')
     if answer4 == '99':
+        subprocess.call(["python", "lin8x.py"])
+    else:
         subprocess.call(["python", "lin8x.py"])
 
 ############################################################
@@ -1426,6 +1659,8 @@ BY KEVIN MITNICK IN ORDER TO STAY SOMEWHAT HIDDEN!
     if answer5 == '1':
         subprocess.call(["python", "lin8x.py"])
     if answer5 == '99':
+        subprocess.call(["python", "lin8x.py"])
+    else:
         subprocess.call(["python", "lin8x.py"])
 
 
@@ -1596,7 +1831,7 @@ Ill do it later.
         if v1 == '99':
             subprocess.call(["python", "lin8x.py"])
 
-        if v1 == '2':
+        if v == '2':
             clearScr()
             clearScr()
             clearScr()
@@ -2501,6 +2736,7 @@ Ill do it later.
                 subprocess.call(["python", "lin8x.py"])
         if v3 == '99':
             subprocess.call(["python", "lin8x.py"])
+
 ############################################################
 
     if v == '4':
@@ -2598,10 +2834,34 @@ Ill do it later.
                 subprocess.call(["python", "lin8x.py"])
         if v3 == '99':
             subprocess.call(["python", "lin8x.py"])
+
 ############################################################
 
     if v == '99':
         subprocess.call(["python", "lin8x.py"])
+
+    else:
+        subprocess.call(["python", "lin8x.py"])
+
+############################################################
+
+elif answer == "7":
+    mac()
+
+############################################################
+
+elif answer == "95":
+    print bcolors.red + """ Please wait while nmap installs """
+    from time import sleep
+    sleep(1)
+    print bcolors.white
+    os.system("sudo apt-get install nmap")
+    os.system("sudo apt-get install msfvenom")
+    os.system("sudo apt-get install setoolkit")
+    os.system("sudo apt-get install msfconsole")
+    os.system("sudo apt-get install hping3")
+    os.system("git clone https:// github.com/wi-fi-analyzer/fluxion.git")
+    subprocess.call(["python", "lin8x.py"])
 
 ############################################################
 
@@ -2626,6 +2886,8 @@ http://www.hackerhighschool.org
     """
     six = raw_input(bcolors.bold + bcolors.green + 'lin8x@kali' + bcolors.white + ':~# ')
     if six == '99':
+        subprocess.call(["python", "lin8x.py"])
+    else:
         subprocess.call(["python", "lin8x.py"])
 
 ############################################################
@@ -2678,6 +2940,8 @@ elif answer == "97":
     cr = raw_input(bcolors.bold + bcolors.green + 'lin8x@kali' + bcolors.white + ':~# ')
     if cr == '99':
         subprocess.call(["python", "lin8x.py"])
+    else:
+        subprocess.call(["python", "lin8x.py"])
 
 ############################################################
 
@@ -2690,6 +2954,7 @@ elif answer == "98":
     os.system('sudo apt install git')
     os.system('sudo apt-get install git')
     os.system('git clone https://github.com/Lin8x/Lin8x')
+    subprocess.call(["python", "lin8x.py"])
 
 ############################################################
 
@@ -2704,6 +2969,10 @@ elif answer == "99":
     clearScr()
     clearScr()
     os.kill(os.getppid(), signal.SIGHUP)
+
+else:
+    subprocess.call(["python", "lin8x.py"])
+    
 
 ############################################################
 
