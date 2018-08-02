@@ -54,6 +54,16 @@ V.6 - Lin8x made: The Buggy Update
 - Fixed the bugs for the Linux Payload Maker
 - Changed "Learn to Hack" Section to [96]
 
+V.7 - Lin8x made: The Mac-xxed Out Update
+- Added a MAC Changer Section to Menu
+- Added "Random MAC Address" to MAC Changer Section
+- Added "Custom MAC Address" to MAC Changer Section
+- Added "See Macchanger/Hardware Specific List" to MAC Changer Section
+- Added "Hacking With Antenna (WEP Cracking, MITM Attacks, etc)" Section to the "Device Scanning + Exploitation" Section
+- Added "Hunt Down & Crack WEP WIFIs"
+- Added the "Download Requirments" section to the Main Menu
+- Fixed All and/or, Major Bugs in the Program
+
 ----------------------------------------------------------------------------------------------
 
 How to install: (Through File)
@@ -69,6 +79,6 @@ to do stuff basically)
 
 ----------------------------------------------------------------------------------------------
 
-*IF YOU NEED TO USE THIS TOOL AND BORROW ANY LARGE AMOUNT OF SOURCE CODE, PLEASE ASK FIRST.*
+*IF YOU WANT TO BORROW ANY LARGE AMOUNT OF SOURCE CODE FROM THIS TOOL, PLEASE ASK FIRST.*
 
 ----------------------------------------------------------------------------------------------
