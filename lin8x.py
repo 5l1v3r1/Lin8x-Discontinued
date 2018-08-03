@@ -162,12 +162,11 @@ print bcolors.white + """ "Great for when you want to target a specific victim" 
 
 print bcolors.red + """
  [1] """ + bcolors.blue + """ Basic Human/Person Search """
-print bcolors.red + """ [2] """ + bcolors.blue + """ Social Engineering """
-print bcolors.red + """ [3] """ + bcolors.blue + """ Device Scanning + Exploitation """
-print bcolors.red + """ [4] """ + bcolors.blue + """ Car Scanning """ 
-print bcolors.red + """ [5] """ + bcolors.blue + """ Ghost Mode """
-print bcolors.red + """ [6] """ + bcolors.blue + """ Trojan/Rat Malware Creater """
-print bcolors.red + """ [7] """ + bcolors.blue + """ Change MAC Address """
+print bcolors.red + """ [2] """ + bcolors.blue + """ Device Scanning + Exploitation """
+print bcolors.red + """ [3] """ + bcolors.blue + """ Car Scanning """ 
+print bcolors.red + """ [4] """ + bcolors.blue + """ Ghost Mode """
+print bcolors.red + """ [5] """ + bcolors.blue + """ Trojan/Rat Malware Creater """
+print bcolors.red + """ [6] """ + bcolors.blue + """ Change MAC Address """
 print bcolors.red + """ [95] """ + bcolors.blue + """Download Requirements """
 print bcolors.red + """ [96] """ + bcolors.blue + """Learn Hacking """ 
 print bcolors.red + """ [97] """ + bcolors.blue + """Credits """
@@ -352,7 +351,7 @@ if answer == "1":
 
 ############################################################
 
-elif answer == "2":
+elif answer == "notheresorry":
     clearScr()
     clearScr()
     clearScr()
@@ -457,7 +456,7 @@ elif answer == "2":
         subprocess.call(["python", "lin8x.py"])
 ############################################################
 
-elif answer == "3":
+elif answer == "2":
     clearScr()
     clearScr()
     clearScr()
@@ -479,12 +478,12 @@ elif answer == "3":
 "`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-' 
 """
     print bcolors.green + ""
-    print bcolors.red + """[1]""" + bcolors.blue + """   Nmap Scanning"""
+    print bcolors.red + """[1]""" + bcolors.blue + """   Nmap Scanning (IP Scanning)"""
     print bcolors.red + """[2]""" + bcolors.blue + """   Sniffing + Spoofing Tools"""
     print bcolors.red + """[3]""" + bcolors.blue + """   Metasploit (Different Tools/Parts)"""
     print bcolors.red + """[4]""" + bcolors.blue + """   Hacking Open Devices/Ports"""
-    print bcolors.red + """[5]""" + bcolors.blue + """   Burpsuite"""
-    print bcolors.red + """[6] """ + bcolors.blue + """  RootD0S Tool (Websites/IPs)"""
+    print bcolors.red + """[5]""" + bcolors.blue + """   Burpsuite (Web Application Hacking)"""
+    print bcolors.red + """[6] """ + bcolors.blue + """  RootD0S Tool (DOS-ing Websites/IPs)"""
     print bcolors.red + """[7] """ + bcolors.blue + """  Hacking With Antenna (WEP Cracking, MITM Attacks, etc) """
     print bcolors.red + """[99]""" + bcolors.blue + """  Back to Menu"""
     print ""
@@ -1373,7 +1372,7 @@ Alrighty, get to work my friend. Hope this was helpful!
         clearScr()
         clearScr()
         clearScr()
-        print bcolors.red + bcolors.bold + """############################################################"""
+        print bcolors.red + """############################################################"""
         print bcolors.green + """
    .~~.   .~~.
   '. \ ' ' / .'""" + bcolors.red + """
@@ -1387,7 +1386,10 @@ Alrighty, get to work my friend. Hope this was helpful!
        '~'
 """
 
-        print bcolors.red + """[1]""" + bcolors.blue + """ Hunt Down & Crack WEP WIFIs"""
+        print bcolors.red + """[1]""" + bcolors.blue + """  Hunt Down & Crack WEP WIFIs (Airmon/Besside-ng)"""
+        print bcolors.red + """[2]""" + bcolors.blue + """  Dictionary WIFI Attacks (Wifite)"""
+        print bcolors.red + """[3]""" + bcolors.blue + """  Wireless GUI Cracker (Fern Wireless Cracker)"""
+        print bcolors.red + """[4]""" + bcolors.blue + """  Social Engineering + MITM (Ghost Phisher)"""
         print bcolors.red + """[99]""" + bcolors.blue + """ Back to menu"""
 
         print bcolors.white + ""
@@ -1398,7 +1400,7 @@ Alrighty, get to work my friend. Hope this was helpful!
             clearScr()
             clearScr()
             clearScr()
-            print bcolors.red + bcolors.bold + """############################################################
+            print bcolors.red + """############################################################
 """
             print bcolors.red + """WARNING: PLEASE MAKE SURE YOU HAVE AN ADAPTER
 PLUGGED INTO YOUR COMPUTER AND IS ALREADY SETUP, AS WELL AS HAVE MONITOR MODE BEFORE CONTINUING! TO EXIT PLEASE DO "CTRL + C"!
@@ -1413,7 +1415,7 @@ Airodump-ng (Listing This Just In Case)
 Besside-ng (Listing This Just In Case)
 """
 
-            print bcolors.red + bcolors.bold + """############################################################
+            print bcolors.red + """############################################################
 """
             print bcolors.red + """Please Press""" + bcolors.green + """ {ENTER} """ + bcolors.red + """to continue..."""
             wifi1 = raw_input(bcolors.white + '')
@@ -1492,13 +1494,37 @@ Please Press""" + bcolors.green + """ {ENTER} """ + bcolors.red + """to continue
             else:
                 subprocess.call(["python", "lin8x.py"])    
 
-############################################################
+###
 
+        if wifi == '2':
+            clearScr
+            clearScr
+            clearScr
+            os.system('wifite') 
+
+###
+
+        if wifi == '3':
+            clearScr
+            clearScr
+            clearScr
+            os.system('fern-wifi-cracker')
+
+###
+
+        if wifi == '4':
+            clearScr
+            clearScr
+            clearScr
+            os.system('ghost-phisher')
+
+############################################################
 
         if wifi == '99':
             subprocess.call(["python", "lin8x.py"])
         else:
             subprocess.call(["python", "lin8x.py"])
+
 ############################################################
 
     if ds == '99':
@@ -1508,7 +1534,7 @@ Please Press""" + bcolors.green + """ {ENTER} """ + bcolors.red + """to continue
 
 ############################################################
 
-elif answer == "4":
+elif answer == "3":
     clearScr()
     clearScr()
     clearScr()
@@ -1559,7 +1585,7 @@ https://www.brickhousesecurity.com/gps-trackers/car-tracking/
 
 ############################################################
 
-elif answer == "5":
+elif answer == "4":
     clearScr()
     clearScr()
     clearScr()
@@ -1666,7 +1692,7 @@ BY KEVIN MITNICK IN ORDER TO STAY SOMEWHAT HIDDEN!
 
 ############################################################
 
-elif answer == "6":
+elif answer == "5":
     clearScr()
     clearScr()
     clearScr()
@@ -2845,7 +2871,7 @@ Ill do it later.
 
 ############################################################
 
-elif answer == "7":
+elif answer == "6":
     mac()
 
 ############################################################
