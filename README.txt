@@ -64,6 +64,13 @@ V.7 - Lin8x made: The Mac-xxed Out Update
 - Added the "Download Requirments" section to the Main Menu
 - Fixed All and/or, Major Bugs in the Program
 
+V.8 - Lin8x made: The Wired-less Update
+- Removed the "Social Engineering" Section from the Main Menu
+- Edited buttons and labels on different sections in order to make them more easier to understand
+- Added Wifite to the "Hacking With Antenna" Section
+- Added Fern Wifi Cracker to the "Hacking With Antenna" Section
+- Added Ghost-Phisher to the "Hacking With Antenna" Section
+
 ----------------------------------------------------------------------------------------------
 
 How to install: (Through File)
