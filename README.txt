@@ -72,7 +72,7 @@ V.8 - Lin8x made: The Wired-less Update
 - Added Ghost-Phisher to the "Hacking With Antenna" Section
 
 v.9 - Lin8x made: The N-"Mapped Out" Update
-- Added entirley new version of the "Nmap" section
+- Added entirely new version of the "Nmap" section
 - Added TCP and UDP scanning editions to the new "Nmap" section
 - Moved the old version of the Nmap Section to [2] in "Device Scanning and Exploitation" section
 - Fixed the "Mac-changer" section to be more efficient
