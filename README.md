@@ -2,7 +2,7 @@
 Our tool for the Kali OS! (Or any Debian Linux OS with many of the tool requirements)
 
 ----------------------------------------------------------------------------------------------
-![Logo Image](logo.png)
+![Logo](/relative/path/to/logo.jpeg?raw=true "Logo")
 ----------------------------------------------------------------------------------------------
 
 This tool was designed with the intent of making a simple and easy tool, that would be perfect for if you wanted to target
