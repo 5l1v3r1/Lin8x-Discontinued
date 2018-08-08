@@ -1,4 +1,4 @@
-# lin8x
+# Lin8x Tool
 Our tool for the Kali OS! (Or any Debian Linux OS with many of the tool requirements)
 
 ----------------------------------------------------------------------------------------------
