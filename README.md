@@ -87,7 +87,7 @@ v.9 - Lin8x made: The N-"Mapped Out" Update
 - Added new version of lin8x on the Android App (Termux); term8x
 
 ----------------------------------------------------------------------------------------------
-# Screenshot of tool
+# Screenshot of Tool
 
 ![Logo](screenshot.png?raw=true "Logo")
 
