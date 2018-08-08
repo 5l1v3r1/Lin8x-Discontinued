@@ -1,3 +1,4 @@
+#lin8x
 ----------------------------------------------------------------------------------------------
 
 This tool was designed with the intent of making a simple and easy tool, that would be perfect for if you wanted to target
