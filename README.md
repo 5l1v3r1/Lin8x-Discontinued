@@ -100,6 +100,10 @@ to do stuff basically)
 
 ----------------------------------------------------------------------------------------------
 
+Feel free to check out our termux tool (The Android Version) here: https://www.github.com/lin8x/term8x
+
+----------------------------------------------------------------------------------------------
+
 *IF YOU WANT TO BORROW ANY LARGE AMOUNT OF SOURCE CODE FROM THIS TOOL, PLEASE ASK FIRST.*
 
 ----------------------------------------------------------------------------------------------
