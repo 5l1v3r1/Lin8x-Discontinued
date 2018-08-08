@@ -17,6 +17,7 @@ Feel free to join our discord at:
 https://discord.gg/H3jUDUK
 
 ----------------------------------------------------------------------------------------------
+# Updates
 
 --- The Newest Version will always be called "Lin8x" in the files! ---
 
@@ -86,6 +87,12 @@ v.9 - Lin8x made: The N-"Mapped Out" Update
 - Added new version of lin8x on the Android App (Termux); term8x
 
 ----------------------------------------------------------------------------------------------
+# Screenshot of tool:
+
+![Logo](screenshot.png?raw=true "Logo")
+
+----------------------------------------------------------------------------------------------
+# How to Install:
 
 How to install: (Through File)
 
