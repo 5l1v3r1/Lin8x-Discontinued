@@ -2,6 +2,8 @@
 Our tool for the Kali OS! (Or any Debian Linux OS with many of the tool requirements)
 
 ----------------------------------------------------------------------------------------------
+![Alt text](relative/path/to/img.jpg?raw=true "Title")
+----------------------------------------------------------------------------------------------
 
 This tool was designed with the intent of making a simple and easy tool, that would be perfect for if you wanted to target
 a specific person. Whether this be by doing a full search on the internet, a nmap scan, or even through shodan, Lin8x has all you need!
