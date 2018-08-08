@@ -87,6 +87,8 @@ def mac():
     mac1 = raw_input(bcolors.green + bcolors.bold + 'lin8x@kali' + bcolors.white + ':~# ')
     if mac1 == '1':
         os.system('macchanger -r eth0')
+        finish = raw_input("Press Enter To Continue")
+        mac()
     if mac1 == '2':
         ap = raw_input(bcolors.white + """Type what type of MAC Address you want to change to (E.g 00:d0:70:20:69:14): 
 """)
@@ -94,23 +96,203 @@ def mac():
             subprocess.call(["python", "lin8x.py"])
         else:
             print "Ok, changing MAC Address to: " + ap    
-
+            
         os.system('macchanger -m ' + ap + " eth0")
 
         finish = raw_input("Press Enter To Continue")
-        subprocess.call(["python", "lin8x.py"])
+        mac()
 
     if mac1 == '3':
         os.system('macchanger -l')
         print bcolors.white + ""
         leave = raw_input(bcolors.white + """Press Enter to Go Back to Menu...""")
         if leave == '':
-            subprocess.call(["python", "lin8x.py"])
+            mac()
         else:
-            subprocess.call(["python", "lin8x.py"])
+            mac()
 
     if mac1 == '99':
         subprocess.call(["python", "lin8x.py"])
+
+def nmapp():
+    clearScr()
+    clearScr()
+    clearScr()
+    clearScr()
+    print(bcolors.red + "######################################## ")
+    print(" ")
+    print bcolors.white + """
+.-. .-..-.   .-.  .--.  .----. 
+|  `| ||  `.'  | / {} \ | {}  }
+| |\  || |\ /| |/  /\  \| .--' 
+`-' `-'`-' ` `-'`-'  `-'`-'    
+"""
+    print(" ")
+    print(bcolors.white + "IP Address You Want To Scan: " + bcolors.red + nmap)
+    print(" ")
+    print(bcolors.red + "[1]"+ bcolors.blue + "   Scan Ip (No Verbosity Lvl)")
+    print(bcolors.red + "[2]"+ bcolors.blue + "   Scan Ip (Verbosity 1)")
+    print(bcolors.red + "[3]"+ bcolors.blue + "   Scan Ip (Verbosity 2)")
+    print(bcolors.red + "[4]"+ bcolors.blue + "   Scan Network for Active Computer")
+    print(bcolors.red + "[5]"+ bcolors.blue + "   Perform a Fast Scan")
+    print(bcolors.red + "[6]"+ bcolors.blue + "   Show Open Port")
+    print(bcolors.red + "[7]"+ bcolors.blue + "   OS Detection")
+    print(bcolors.red + "[8]"+ bcolors.blue + "   Sevice Version Detection")
+    print(bcolors.red + "[9]"+ bcolors.blue + "   Firewall Detection")
+    print(bcolors.red + "[10]"+ bcolors.blue + "  No Ping (Disable Host)")                 
+    print(bcolors.red + "[11]"+ bcolors.blue + "  Stealthy Scan")
+    print(bcolors.red + "[12]"+ bcolors.blue + "  Disable DNS Resolution")
+    print(bcolors.red + "[13]"+ bcolors.blue + "  Determine Support IP Protocols")
+    print(bcolors.red + "[14]"+ bcolors.blue + "  Scan for all TCP Ports")
+    print(bcolors.red + "[15]"+ bcolors.blue + "  Scan for particular TCP Ports (Type: 80)")
+    print(bcolors.red + "[16]"+ bcolors.blue + "  Scan for all UDP Ports")
+    print(bcolors.red + "[17]"+ bcolors.blue + "  Scan for particular UDP Ports (Type: 53)")
+    print(bcolors.red + "[99]"+ bcolors.blue + "  Back to Main Menu")
+    print(" ")
+    print(bcolors.red + "######################################## ")
+    print(" ")
+    na = raw_input(bcolors.green + 'lin8x@kali' + bcolors.white + ':~# ')    
+    if na == '1':
+        clearScr()
+        clearScr()
+        clearScr()
+        os.system('nmap ' + nmap)
+        print(" ")
+        answernmap = raw_input("Press Any Key to Go Back to the Nmap Menu")
+        nmapp()
+    if na == '2':
+        clearScr()
+        clearScr()
+        clearScr()
+        os.system('nmap -v ' + nmap)
+        print(" ")
+        answernmap = raw_input("Press Any Key to Go Back to the Nmap Menu")
+        nmapp()
+    if na == '3':
+        clearScr()
+        clearScr()
+        clearScr()
+        os.system('nmap -vv ' + nmap)
+        print(" ")
+        answernmap = raw_input("Press Any Key to Go Back to the Nmap Menu")
+        nmapp()
+    if na == '4':
+        clearScr()
+        clearScr()
+        clearScr()
+        os.system('nmap -sn ' + nmap)
+        print(" ")
+        answernmap = raw_input("Press Any Key to Go Back to the Nmap Menu")
+        nmapp()
+    if na == '5':
+        clearScr()
+        clearScr()
+        clearScr()
+        os.system('nmap -F ' + nmap)
+        print(" ")
+        answernmap = raw_input("Press Any Key to Go Back to the Nmap Menu")
+        nmapp()
+    if na == '6':
+        clearScr()
+        clearScr()
+        clearScr()
+        os.system('nmap -open ' + nmap)
+        print(" ")
+        answernmap = raw_input("Press Any Key to Go Back to the Nmap Menu")
+        nmapp()
+    if na == '7':
+        clearScr()
+        clearScr()
+        clearScr()
+        os.system('nmap -O ' + nmap)
+        print(" ")
+        answernmap = raw_input("Press Any Key to Go Back to the Nmap Menu")
+        nmapp()
+    if na == '8':
+        clearScr()
+        clearScr()
+        clearScr()
+        os.system('nmap -sV ' + nmap)
+        print(" ")
+        answernmap = raw_input("Press Any Key to Go Back to the Nmap Menu")
+        nmapp()
+    if na == '9':
+        clearScr()
+        clearScr()
+        clearScr()
+        os.system('nmap -sA ' + nmap)
+        print(" ")
+        answernmap = raw_input("Press Any Key to Go Back to the Nmap Menu")
+        nmapp()
+    if na == '10':
+        clearScr()
+        clearScr()
+        clearScr()
+        os.system('nmap -Pn ' + nmap)
+        print(" ")
+        answernmap = raw_input("Press Any Key to Go Back to the Nmap Menu")
+        nmapp()
+    if na == '11':
+        clearScr()
+        clearScr()
+        clearScr()
+        os.system('nmap -sS ' + nmap)
+        print(" ")
+        answernmap = raw_input("Press Any Key to Go Back to the Nmap Menu")
+        nmapp()
+    if na == '12':
+        clearScr()
+        clearScr()
+        clearScr()
+        os.system('nmap -n ' + nmap)
+        print(" ")
+        answernmap = raw_input("Press Any Key to Go Back to the Nmap Menu")
+        nmapp()
+    if na == '13':
+        clearScr()
+        clearScr()
+        clearScr()
+        os.system('nmap -sO ' + nmap)
+        print(" ")
+        answernmap = raw_input("Press Any Key to Go Back to the Nmap Menu")
+        nmapp()
+    if na == '14':
+        clearScr()
+        clearScr()
+        clearScr()
+        os.system('nmap -sT ' + nmap)
+        print(" ")
+        answernmap = raw_input("Press Any Key to Go Back to the Nmap Menu")
+        nmapp()
+    if na == '15':
+        clearScr()
+        clearScr()
+        clearScr()
+        os.system('nmap -p T:80 ' + nmap)
+        print(" ")
+        answernmap = raw_input("Press Any Key to Go Back to the Nmap Menu")
+        nmapp()
+    if na == '16':
+        clearScr()
+        clearScr()
+        clearScr()
+        os.system('nmap -sU ' + nmap)
+        print(" ")
+        answernmap = raw_input("Press Any Key to Go Back to the Nmap Menu")
+        nmapp()
+    if na == '17':
+        clearScr()
+        clearScr()
+        clearScr()
+        os.system('nmap -p U:53 ' + nmap)
+        print(" ")
+        answernmap = raw_input("Press Any Key to Go Back to the Nmap Menu")
+        nmapp()
+    if na == '99':
+        subprocess.call(["python", "lin8x.py"])
+
+def hd():
+    print " oof "
 
 ############################################################
 
@@ -162,8 +344,8 @@ print bcolors.white + """ "Great for when you want to target a specific victim" 
 
 print bcolors.red + """
  [1] """ + bcolors.blue + """ Basic Human/Person Search """
-print bcolors.red + """ [2] """ + bcolors.blue + """ Device Scanning + Exploitation """
-print bcolors.red + """ [3] """ + bcolors.blue + """ Car Scanning """ 
+print bcolors.red + """ [2] """ + bcolors.blue + """ Car Scanning """ 
+print bcolors.red + """ [3] """ + bcolors.blue + """ Device Scanning + Exploitation """
 print bcolors.red + """ [4] """ + bcolors.blue + """ Ghost Mode """
 print bcolors.red + """ [5] """ + bcolors.blue + """ Trojan/Rat Malware Creater """
 print bcolors.red + """ [6] """ + bcolors.blue + """ Change MAC Address """
@@ -456,7 +638,7 @@ elif answer == "notheresorry":
         subprocess.call(["python", "lin8x.py"])
 ############################################################
 
-elif answer == "2":
+elif answer == "3":
     clearScr()
     clearScr()
     clearScr()
@@ -479,12 +661,13 @@ elif answer == "2":
 """
     print bcolors.green + ""
     print bcolors.red + """[1]""" + bcolors.blue + """   Nmap Scanning (IP Scanning)"""
-    print bcolors.red + """[2]""" + bcolors.blue + """   Sniffing + Spoofing Tools"""
-    print bcolors.red + """[3]""" + bcolors.blue + """   Metasploit (Different Tools/Parts)"""
-    print bcolors.red + """[4]""" + bcolors.blue + """   Hacking Open Devices/Ports"""
-    print bcolors.red + """[5]""" + bcolors.blue + """   Burpsuite (Web Application Hacking)"""
-    print bcolors.red + """[6] """ + bcolors.blue + """  RootD0S Tool (DOS-ing Websites/IPs)"""
-    print bcolors.red + """[7] """ + bcolors.blue + """  Hacking With Antenna (WEP Cracking, MITM Attacks, etc) """
+    print bcolors.red + """[2]""" + bcolors.blue + """   Nmap Scanning (Old Version)"""
+    print bcolors.red + """[3]""" + bcolors.blue + """   Sniffing + Spoofing Tools"""
+    print bcolors.red + """[4]""" + bcolors.blue + """   Metasploit (Different Tools/Parts)"""
+    print bcolors.red + """[5]""" + bcolors.blue + """   Hacking Open Devices/Ports"""
+    print bcolors.red + """[6]""" + bcolors.blue + """   Burpsuite (Web Application Hacking)"""
+    print bcolors.red + """[7] """ + bcolors.blue + """  RootD0S Tool (DOS-ing Websites/IPs)"""
+    print bcolors.red + """[8] """ + bcolors.blue + """  Hacking With Antenna (WEP Cracking, MITM Attacks, etc) """
     print bcolors.red + """[99]""" + bcolors.blue + """  Back to Menu"""
     print ""
     print bcolors.green + ""
@@ -492,7 +675,9 @@ elif answer == "2":
 """
     ds = raw_input(bcolors.bold + bcolors.green + 'lin8x@kali' + bcolors.white + ':~# ')
     if ds == '1':
-
+        nmap = raw_input(bcolors.white + 'Please Type the IP Address you want to scan: ')
+        nmapp()
+    if ds == '2':
         clearScr()
         clearScr()
         clearScr()
@@ -970,7 +1155,7 @@ elif answer == "2":
             subprocess.call(["python", "lin8x.py"])
         else:
             subprocess.call(["python", "lin8x.py"])
-    if ds == '2':
+    if ds == '3':
 
         clearScr()
         clearScr()
@@ -1153,7 +1338,7 @@ https://www.docdroid.net/QKOE7wJ/tutorial-dns-spoofing.pdf#page=2
             subprocess.call(["python", "lin8x.py"])
         else:
             subprocess.call(["python", "lin8x.py"])
-    if ds == '3':
+    if ds == '4':
 
         clearScr()
         clearScr()
@@ -1216,7 +1401,7 @@ https://www.docdroid.net/QKOE7wJ/tutorial-dns-spoofing.pdf#page=2
             subprocess.call(["python", "lin8x.py"])
         else:
             subprocess.call(["python", "lin8x.py"])
-    if ds == '4':
+    if ds == '5':
         clearScr()
         clearScr()
         clearScr()
@@ -1308,11 +1493,11 @@ Alrighty, get to work my friend. Hope this was helpful!
             subprocess.call(["python", "lin8x.py"])
         else:
             subprocess.call(["python", "lin8x.py"])
-    if ds == '5':
+    if ds == '6':
         os.system('burpsuite')
         subprocess.call(["python", "lin8x.py"])
 
-    if ds == "6":
+    if ds == "7":
         clearScr()
         clearScr()
         clearScr()
@@ -1368,7 +1553,7 @@ Alrighty, get to work my friend. Hope this was helpful!
 
 ############################################################
 
-    if ds == '7':
+    if ds == '8':
         clearScr()
         clearScr()
         clearScr()
@@ -1522,19 +1707,15 @@ Please Press""" + bcolors.green + """ {ENTER} """ + bcolors.red + """to continue
 
         if wifi == '99':
             subprocess.call(["python", "lin8x.py"])
-        else:
-            subprocess.call(["python", "lin8x.py"])
 
 ############################################################
 
     if ds == '99':
         subprocess.call(["python", "lin8x.py"])
-    else:
-        subprocess.call(["python", "lin8x.py"])
 
 ############################################################
 
-elif answer == "3":
+elif answer == "2":
     clearScr()
     clearScr()
     clearScr()
@@ -1585,7 +1766,7 @@ https://www.brickhousesecurity.com/gps-trackers/car-tracking/
 
 ############################################################
 
-elif answer == "4":
+elif answer == "5":
     clearScr()
     clearScr()
     clearScr()
