@@ -1,4 +1,6 @@
-#lin8x
+# lin8x
+Our tool for the Kali OS! (Or any Debian Linux OS with many tool requirements)
+
 ----------------------------------------------------------------------------------------------
 
 This tool was designed with the intent of making a simple and easy tool, that would be perfect for if you wanted to target
