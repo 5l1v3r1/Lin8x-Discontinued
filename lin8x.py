@@ -1766,7 +1766,7 @@ https://www.brickhousesecurity.com/gps-trackers/car-tracking/
 
 ############################################################
 
-elif answer == "5":
+elif answer == "4":
     clearScr()
     clearScr()
     clearScr()
